@@ -2,9 +2,9 @@
 
 This simple class provides an implementation of C++'s `SCOPE_EXIT`, or GoLang's `defer`.
 
-To use, assign an instance of this object to a local variable.  When that variable falls out of scope (or is explicitly `unset`, the callback passed to the constructor will be invoked.  This is useful, for example, to aid cleanup at the end of a funciton.
+To use, assign an instance of this object to a local variable.  When that variable falls out of scope (or is explicitly `unset`), the callback passed to the constructor will be invoked.  This is useful, for example, to aid cleanup at the end of a function.
 
-```
+```php
 function f(&$x) {
   $x = 1;
   $_ = new \PhpLang\ScopeExit(function() use (&$x) { $x = 2; });
